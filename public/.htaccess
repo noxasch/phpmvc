@@ -1,0 +1,20 @@
+# make sure mode_rewrite is enabled [usually turned on by defaults]
+<IfModule mod_rewrite.c>
+    Options -Multiviews
+    RewriteEngine On
+    # rewrite base to specified folder
+    RewriteBase /phpmvc/public
+    # check if requested file is not found
+    # go to rewrite rule 
+    # which is to redirects to index.php
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule  ^(.*)$ index.php?url=$1 [QSA,L]
+    # if file exist
+    # route everything through index.php?url=$1
+    # every input will be accepted as params 1
+    # this will treat url
+    # from index.php?=posts
+    # to equivalent public/posts
+    # posts is the parameter
+</IfModule>
