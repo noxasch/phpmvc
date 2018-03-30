@@ -3,9 +3,9 @@
 
 // DB Params
 define('DB_HOST','localhost');
-define('DB_USER','root');
-define('DB_PASS','');
-define('DB_NAME','testmvc');
+define('DB_USER','YOUR_USERNAME');
+define('DB_PASS','YOUR_PASSWORD');
+define('DB_NAME','YOUR_DBNAME');
 
 // App root
 /*
@@ -19,10 +19,11 @@ define('APPROOT', dirname(dirname(__FILE__))); // so that we can access the appr
 // URL root 
 // for linking
 // define('BASEURL', 'http://localhost/phpmvc');
-define('BASEURL', 'http://' . $_SERVER['HTTP_HOST']);
+//define('BASEURL', 'http://' . $_SERVER['HTTP_HOST']);
+define('BASEURL', 'YOUR_SITE_URL');
 //var_dump($_SERVER);
 // echo 'BASEURL: ' . BASEURL . '<br>';
 // to be use when calling from url
 
 // Site name
-define('SITENAME', 'TraversyMVC');
+define('SITENAME', 'YOUR_SITE_NAME');
