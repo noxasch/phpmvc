@@ -1,4 +1,5 @@
 # redirects core directory to public
+# redirtect all request to public/index.php
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteRule ^$ public/ [L]

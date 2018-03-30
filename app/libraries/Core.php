@@ -57,6 +57,7 @@
 
         // 5. Get Params
         // if url exist assign url to params : if not set it as empty array
+        //var_dump($url);
         $this->params = $url ? array_values($url) : [];
 
         // 6. Call a callback with array of a params
@@ -75,10 +76,10 @@
      public function getUrl(){
          // check if url params is set
          if(isset($_GET['url'])){
-            // echo $_GET['url'];
+            //echo 'Input URL: ' . $_GET['url'] . '<br>';
             // 1. strip trailing slash ( "/" ) from end of the url
             $url = rtrim($_GET['url'], '/');
-            // echo 'trim:' . $url;
+            //echo 'Trimed : ' . $url;
             // 2. sanitize input url
             $url = filter_var($url, FILTER_SANITIZE_URL);
             // 3. break url param separated by (/) into an array

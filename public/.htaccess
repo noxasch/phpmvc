@@ -3,7 +3,9 @@
     Options -Multiviews
     RewriteEngine On
     # rewrite base to specified folder
-    RewriteBase /phpmvc/public
+    # RewriteBase /phpmvc/public
+    # since we change vhost to phpmvc instead of localhost
+    RewriteBase /public
     # check if requested file is not found
     # go to rewrite rule 
     # which is to redirects to index.php

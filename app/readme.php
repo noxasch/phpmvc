@@ -10,5 +10,5 @@
  * - Models:
  * - Controllers: the actual controller extends from base controller
  * - Views:
- * - bootstrap.php: require all necessary file
+ * - bootstrap.php: require or include all necessary files
  */
